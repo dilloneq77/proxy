@@ -114,7 +114,7 @@ public class TestRunner {
             while (!testMethodInvokeFuture.isDone()) {
                 var currentTimeOfMethodInv = System.currentTimeMillis() - timeBeforeInv;
                 if (currentTimeOfMethodInv >= timeoutMillis) {
-                    throw new TimeoutException(String.format("Execute exceeded maximum time = %s s", timeoutMillis / 1000L));
+                    throw new TimeoutException(String.format("Execute exceeded maximum time = %s s", timeoutMillis / 1000D));
                 }
             }
         } else {
